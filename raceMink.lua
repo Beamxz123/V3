@@ -5,24 +5,11 @@ spawn(function()
 	while true do wait(.3)
 		   pcall(function ()
           local Race = game:GetService("Players").LocalPlayer.Data.Race.Value
-		if (Race == "Mink") == false then 
+		if (Race == "Human") == false then 
 			game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BlackbeardReward", "Reroll", "2")
 		end
       end)
 	end
-end)
-spawn(function()
-    game:GetService("RunService").Stepped:Connect(function()
-        
-        pcall(function() 
-            local args = {
-            [1] = "EnablePvp"
-        }
-        
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-        end)
-    end)
-    
 end)
 local vu = game:GetService("VirtualUser")
 	game:GetService("Players").LocalPlayer.Idled:connect(function()
