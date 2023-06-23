@@ -5,7 +5,7 @@ spawn(function()
 	while true do wait(.3)
 		   pcall(function ()
           local Race = game:GetService("Players").LocalPlayer.Data.Race.Value
-		if (Race == "Human") == false then 
+		if (Race == "Mink") == false then 
 			game.ReplicatedStorage.Remotes.CommF_:InvokeServer("BlackbeardReward", "Reroll", "2")
 		end
       end)
